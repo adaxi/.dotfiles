@@ -1,6 +1,4 @@
-alias ssh=sshrc
 alias diff="colordiff -u"
-
 
 ###
 # Allows you to capture network traffic on a remote machine
@@ -16,3 +14,4 @@ function rewire {
 	/usr/bin/ssh -iany $host tshark -w - $options | wireshark -k -i -
 }
 
+test -f ~/.bash_aliases_untracked && ~/.bash_aliases_untracked

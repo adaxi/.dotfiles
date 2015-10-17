@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/adaxi/Workspaces/GerikBonaert/BookmarkRescue'
-let g:netrw_dirhist_2='/home/adaxi/temper-python/temperusb.egg-info'
-let g:netrw_dirhist_3='/home/adaxi/.config'
-let g:netrw_dirhist_4='/home/adaxi/.vim/bundle'
-let g:netrw_dirhist_5='/home/adaxi/.vim'
-let g:netrw_dirhist_6='/home/adaxi/.vim/autoload'
-let g:netrw_dirhist_7='/home/adaxi/.vim'
