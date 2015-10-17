@@ -115,7 +115,7 @@ fi
 shopt -s cdspell
 
 # Create a sandbox directory that will be cleared at reboot
-sandbox_path=$(mktemp -p /dev/shm/)
+sandbox_path=$(mktemp -d -p /dev/shm/)
 test -L ~/Sandbox || ln -sf $sandbox_path ~/Sandbox
 
 
