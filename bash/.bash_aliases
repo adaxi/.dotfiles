@@ -14,4 +14,4 @@ function rewire {
 	/usr/bin/ssh -iany $host tshark -w - $options | wireshark -k -i -
 }
 
-test -f ~/.bash_aliases_untracked && ~/.bash_aliases_untracked
+test -f ~/.bash_aliases_untracked && source ~/.bash_aliases_untracked
