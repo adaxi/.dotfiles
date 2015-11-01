@@ -117,4 +117,10 @@ shopt -s cdspell
 # Create a sandbox directory that will be cleared at reboot
 test -h ~/Sandbox && test -d $(readlink ~/Sandbox) || ln -sf $(mktemp -d -p /dev/shm/) ~/Sandbox
 
-
+# Configure dch
+if [ "$(hostname)" == "kyokko" ]; then
+	export DEBEMAIL=gbo@escaux.com
+	export DEBCHANGE_AUTO_NMU=no
+else
+	export DEBEMAIL=dev@adaxisoft.be
+fi
