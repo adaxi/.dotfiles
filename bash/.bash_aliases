@@ -1,3 +1,6 @@
+# Only add aliases for commands and options that you know by heart.
+# You must not be blocked when you are on a machine that does not
+# have aliases
 alias diff="colordiff -u"
 alias pretty-json="python -m json.tool"
 alias ..="cd .."
