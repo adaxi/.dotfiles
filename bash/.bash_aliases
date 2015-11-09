@@ -5,7 +5,7 @@ alias pretty-json="python -m json.tool"
 # Allows you to capture network traffic on a remote machine
 # and display it in wireshark on your machine.
 # Usage:
-# 	rewire [<user>@]<host> <tshark options and filters>
+# 	rewire [<user>@]<host> [<tshark options and filters>]
 ###
 function rewire {
 	local host=$1
