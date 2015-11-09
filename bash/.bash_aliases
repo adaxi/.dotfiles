@@ -1,4 +1,5 @@
 alias diff="colordiff -u"
+alias pretty-json="python -m json.tool"
 
 ###
 # Allows you to capture network traffic on a remote machine
