@@ -1,12 +1,18 @@
+# Only add aliases for commands and options that you know by heart.
+# You must not be blocked when you are on a machine that does not
+# have aliases
 alias less="less -r"
 alias diff="colordiff -u"
 alias pretty-json="python -m json.tool"
+alias ..="cd .."
+alias mkdir="mkdir -pv"
+
 
 ###
 # Allows you to capture network traffic on a remote machine
 # and display it in wireshark on your machine.
 # Usage:
-# 	rewire <host> <tshark options and filters>
+# 	rewire [<user>@]<host> [<tshark options and filters>]
 ###
 function rewire {
 	local host=$1
