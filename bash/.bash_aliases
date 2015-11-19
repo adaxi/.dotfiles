@@ -1,3 +1,4 @@
+alias less="less -r"
 alias diff="colordiff -u"
 alias pretty-json="python -m json.tool"
 
@@ -9,7 +10,7 @@ alias pretty-json="python -m json.tool"
 ###
 function rewire {
 	local host=$1
-	shift 
+	shift
 	local options=$@
 
 	/usr/bin/ssh -iany $host tshark -w - $options | wireshark -k -i -
