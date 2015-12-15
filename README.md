@@ -33,10 +33,7 @@ stow vim
 
 inspiration
 -----------
-This was inspired by an article by Brandon Invergo, which recommends using 
+This was inspired by an [article](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two) by Brandon Invergo, which recommends using 
 GNU Stow to manage your dotfiles.
-
-The article is available at the following URL:
-http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
 
 This repository is cloned by my ansible playbook when building my day to day machine.
