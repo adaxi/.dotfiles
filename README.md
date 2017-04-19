@@ -25,7 +25,7 @@ cd ~/.dotfiles
 
 Or you can install specific files. For example if you only want to get my vim configuration:
 
-```
+```sh
 cd ~/.dotfiles
 stow vim
 ```
