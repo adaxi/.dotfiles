@@ -118,7 +118,7 @@ shopt -s cdspell
 test -h ~/Sandbox && test -d $(readlink ~/Sandbox) || ln -sf $(mktemp -d -p /dev/shm/) ~/Sandbox
 
 # Configure dch
-if [ "$(hostname)" == "kyokko" ]; then
+if [ "$(hostname)" == "kuma" ]; then
 	export DEBEMAIL=gbo@escaux.com
 	export DEBCHANGE_AUTO_NMU=no
 else
