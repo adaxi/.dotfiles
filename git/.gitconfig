@@ -3,3 +3,16 @@
 	email=dev@adaxisoft.be
 [alias]
 	co = checkout
+	cp = cherry-pick
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[tag]
+	sort = -v:refname
+[rerere]
+	enabled = true
+[push]
+	autoSetupRemote = true
