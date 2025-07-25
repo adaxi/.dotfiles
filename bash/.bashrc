@@ -115,12 +115,48 @@ fi
 shopt -s cdspell
 
 # Create a sandbox directory that will be cleared at reboot
-test -h ~/Sandbox && test -d $(readlink ~/Sandbox) || ln -sf $(mktemp -d -p /dev/shm/) ~/Sandbox
+test -h ~/Sandbox && test -d "$(readlink ~/Sandbox)" || ln -sf "$(mktemp -d -p /dev/shm/)" ~/Sandbox
 
 # Configure dch
-if [ "$(hostname)" == "kuma" ]; then
-	export DEBEMAIL=gbo@escaux.com
+if [ "$(hostname)" == "karman" ]; then
+	export DEBEMAIL=gerik.bonaert@dstny.com
 	export DEBCHANGE_AUTO_NMU=no
 else
 	export DEBEMAIL=dev@adaxisoft.be
+fi
+
+# Configure git
+if [ "$(hostname)" == "karman" ]; then
+    export GIT_AUTHOR_EMAIL=gerik.bonaert@dstny.com
+else
+    export GIT_AUTHOR_EMAIL=dev@adaxisoft.be
+fi
+export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+export GIT_AUTHOR_NAME=Gerik Bonaert
+export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+
+# Add custom executables to $PATH
+if [ -d "$HOME/.bin" ]; then
+	PATH="$HOME/.bin:$PATH"
+fi
+
+# Add custom node executables
+if [ -d "$HOME/Workspaces/nodejs-tools/node_modules/.bin" ]; then
+    PATH="$PATH:./node_modules/.bin:$HOME/Workspaces/nodejs-tools/node_modules/.bin"
+fi
+
+# Add kubectl completion
+if command -v kubectl >/dev/null 2>&1; then
+    source <(kubectl completion bash)
+fi
+
+if [ -d "$HOME/Workspaces/modules-kubernetes" ]; then
+    export KUBERNETES_MODULES_DIR="$HOME/Workspaces/modules-kubernetes"
+fi
+
+# Load custom completions
+if [ -d "$HOME/.bash_completion.d" ]; then
+    for f in "$HOME"/.bash_completion.d/*; do
+        [ -f "$f" ] && source "$f"
+    done
 fi
